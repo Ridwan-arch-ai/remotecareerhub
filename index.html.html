@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RemoteCareerHub 🌍 | Build Your Career From Home</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 8%;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0b8f55;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #0b8f55;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #0b8f55, #e63946);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #0b8f55;
+    }
+
+    .btn-primary:hover {
+      background: #e9efff;
+    }
+
+    .btn-dark {
+      background: #10251b;
+      color: white;
+    }
+
+    .btn-dark:hover {
+      background: #374151;
+    }
+
+    /* GENERAL */
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+      color: #10251b;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    /* JOB CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #1f2937;
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    /* STEPS */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      background: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: 15px;
+    }
+
+    .number {
+      width: 50px;
+      height: 50px;
+      background: #0b8f55;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* SKILLS */
+    .skills {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .skill {
+      margin-bottom: 25px;
+    }
+
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .bar {
+      height: 12px;
+      background: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress {
+      height: 100%;
+      background: #0b8f55;
+      border-radius: 10px;
+    }
+
+    /* SAFETY */
+    .safety {
+      background: #10251b;
+      color: white;
+    }
+
+    .safety .section-title h2 {
+      color: white;
+    }
+
+    .safety-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .safety-card {
+      background: #1f2937;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    .safety-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .safety-card p {
+      color: #d1d5db;
+    }
+
+    /* CALCULATOR */
+    .calculator {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .calculator input {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #0b8f55;
+    }
+
+    /* CONTACT */
+    .contact {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .contact textarea {
+      height: 150px;
+      resize: vertical;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #071b11;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .cards,
+      .steps,
+      .safety-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .cards,
+      .steps,
+      .safety-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 35px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 60px 5%;
+      }
+    }
+  
+    /* EXPLORE JOB DETAILS */
+    .explore-btn {
+      margin-top: 18px;
+      padding: 11px 18px;
+      border: none;
+      border-radius: 24px;
+      background: #0b8f55;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .card:nth-child(even) .explore-btn {
+      background: #e63946;
+    }
+
+    .explore-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .job-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      background: rgba(0,0,0,0.68);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .job-modal.show {
+      display: flex;
+    }
+
+    .job-modal-content {
+      width: min(760px, 100%);
+      max-height: 88vh;
+      overflow-y: auto;
+      background: #fff;
+      color: #17251d;
+      border-radius: 24px;
+      padding: 35px;
+      position: relative;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+      animation: jobModalUp 0.25s ease;
+    }
+
+    .job-modal-content h2 {
+      color: #0b8f55;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .job-modal-content h3 {
+      color: #10251b;
+      margin-top: 22px;
+      margin-bottom: 8px;
+    }
+
+    .job-modal-content ul {
+      padding-left: 22px;
+    }
+
+    .job-modal-content li {
+      margin: 7px 0;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      background: #e63946;
+      color: #fff;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    .job-tip {
+      margin-top: 22px;
+      padding: 16px;
+      border-radius: 14px;
+      background: #e8f8ef;
+      border-left: 5px solid #0b8f55;
+    }
+
+    body.dark .job-modal-content {
+      background: #14261c;
+      color: #f4fff8;
+    }
+
+    body.dark .job-modal-content h3 {
+      color: #f4fff8;
+    }
+
+    body.dark .job-tip {
+      background: #183b29;
+    }
+
+    @keyframes jobModalUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .job-modal-content {
+        padding: 28px 20px;
+      }
+
+      .job-modal-content h2 {
+        font-size: 26px;
+      }
+    }
+
+
+    /* HOW TO START - INFORMATION */
+    .step-info-btn {
+      margin-top: 16px;
+      padding: 10px 17px;
+      border: none;
+      border-radius: 22px;
+      background: #0b8f55;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .step:nth-child(even) .step-info-btn {
+      background: #e63946;
+    }
+
+    .step-info-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 7px 16px rgba(0,0,0,0.15);
+    }
+
+
+    .domain-name {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      font-weight: bold;
+      letter-spacing: .4px;
+    }
+
+</style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">WorkFromHome</div>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#jobs">Jobs</a></li>
+      <li><a href="#websites">Websites</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#steps">How It Works</a></li>
+      <li><a href="#safety">Safety</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+        <p class="domain-name">remotecareerhub.com</p>
+
+      <h1>Build Your Career <span>While You're Home</span> 🏠💻</h1>
+
+      <p>
+        Learn how to find legitimate remote work, develop useful skills,
+        and build a professional career from almost anywhere.
+      </p>
+
+      <a href="#jobs" class="btn btn-primary">
+        Explore Jobs
+      </a>
+
+      <a href="#steps" class="btn btn-dark">
+        Learn How
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- JOBS -->
+  <section id="jobs">
+
+    <div class="section-title">
+      <h2>Popular Work-From-Home Jobs</h2>
+      <p>Explore different types of remote work.</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>Web Development</h3>
+        <p>
+          Build websites and web applications using HTML, CSS,
+          JavaScript and other programming technologies.
+        </p>
+        <button class="explore-btn" onclick="openJob('web')">🔎 Explore Job</button>
+      </div>
+
+      <div class="card">
+        <div class="icon">✍️</div>
+        <h3>Content Writing</h3>
+        <p>
+          Write articles, blog posts, website content and other
+          useful digital content.
+        </p>
+        <button class="explore-btn" onclick="openJob('writing')">🔎 Explore Job</button>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎨</div>
+        <h3>Graphic Design</h3>
+        <p>
+          Create logos, posters, social media graphics and other
+          visual content.
+        </p>
+        <button class="explore-btn" onclick="openJob('design')">🔎 Explore Job</button>
+      </div>
+
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>Data Work</h3>
+        <p>
+          Work with spreadsheets, organize information and perform
+          basic data-related tasks.
+        </p>
+        <button class="explore-btn" onclick="openJob('data')">🔎 Explore Job</button>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎧</div>
+        <h3>Customer Support</h3>
+        <p>
+          Help customers through online chat, email or other
+          communication platforms.
+        </p>
+        <button class="explore-btn" onclick="openJob('support')">🔎 Explore Job</button>
+      </div>
+
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>Social Media</h3>
+        <p>
+          Help businesses create content, manage accounts and
+          communicate with their audiences.
+        </p>
+        <button class="explore-btn" onclick="openJob('social')">🔎 Explore Job</button>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- POPULAR JOB WEBSITES -->
+  <section id="websites">
+
+    <div class="section-title">
+      <h2>🌐 Popular Job Websites</h2>
+      <p>Explore well-known platforms for remote jobs and freelance opportunities.</p>
+    </div>
+
+    <div class="website-grid">
+
+      <div class="website-card">
+        <div class="website-icon">💼</div>
+        <h3>LinkedIn Jobs</h3>
+        <p>Find professional jobs, connect with employers and search for remote roles.</p>
+        <a class="website-link" href="https://www.linkedin.com/jobs/" target="_blank" rel="noopener">Visit LinkedIn →</a>
+      </div>
+
+      <div class="website-card">
+        <div class="website-icon">🔎</div>
+        <h3>Indeed</h3>
+        <p>Search for jobs by role, location and remote-work options.</p>
+        <a class="website-link" href="https://www.indeed.com/" target="_blank" rel="noopener">Visit Indeed →</a>
+      </div>
+
+      <div class="website-card">
+        <div class="website-icon">🌍</div>
+        <h3>We Work Remotely</h3>
+        <p>A job board focused on remote opportunities across different categories.</p>
+        <a class="website-link" href="https://weworkremotely.com/" target="_blank" rel="noopener">Visit WWR →</a>
+      </div>
+
+      <div class="website-card">
+        <div class="website-icon">💻</div>
+        <h3>Upwork</h3>
+        <p>A platform for freelance and contract projects in many skill areas.</p>
+        <a class="website-link" href="https://www.upwork.com/" target="_blank" rel="noopener">Visit Upwork →</a>
+      </div>
+
+      <div class="website-card">
+        <div class="website-icon">🎯</div>
+        <h3>Fiverr</h3>
+        <p>Offer freelance services such as design, writing, programming and more.</p>
+        <a class="website-link" href="https://www.fiverr.com/" target="_blank" rel="noopener">Visit Fiverr →</a>
+      </div>
+
+      <div class="website-card">
+        <div class="website-icon">🚀</div>
+        <h3>Wellfound</h3>
+        <p>Explore jobs at startups and technology companies, including remote roles.</p>
+        <a class="website-link" href="https://wellfound.com/jobs" target="_blank" rel="noopener">Visit Wellfound →</a>
+      </div>
+
+      <div class="website-card">
+        <div class="website-icon">🏠</div>
+        <h3>Remote.co</h3>
+        <p>Browse remote job opportunities across different career categories.</p>
+        <a class="website-link" href="https://remote.co/remote-jobs/" target="_blank" rel="noopener">Visit Remote.co →</a>
+      </div>
+
+      <div class="website-card">
+        <div class="website-icon">🧭</div>
+        <h3>Remote OK</h3>
+        <p>Search remote opportunities with filters for different job categories.</p>
+        <a class="website-link" href="https://remoteok.com/" target="_blank" rel="noopener">Visit Remote OK →</a>
+      </div>
+
+      <div class="website-card">
+        <div class="website-icon">📋</div>
+        <h3>FlexJobs</h3>
+        <p>Browse remote and flexible job listings across many career fields.</p>
+        <a class="website-link" href="https://www.flexjobs.com/remote-jobs" target="_blank" rel="noopener">Visit FlexJobs →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="steps">
+
+    <div class="section-title">
+      <h2>How To Start</h2>
+      <p>Follow these simple steps to begin your remote-work journey.</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="number">1</div>
+        <h3>Choose a Skill</h3>
+        <p>
+          Pick a skill that interests you and learn the basics.
+        </p>
+        <button class="step-info-btn" onclick="openStep('choose')">📖 More Information</button>
+      </div>
+
+      <div class="step">
+        <div class="number">2</div>
+        <h3>Practice</h3>
+        <p>
+          Build your ability by completing projects and exercises.
+        </p>
+        <button class="step-info-btn" onclick="openStep('practice')">📖 More Information</button>
+      </div>
+
+      <div class="step">
+        <div class="number">3</div>
+        <h3>Create a Portfolio</h3>
+        <p>
+          Show potential employers examples of what you can do.
+        </p>
+        <button class="step-info-btn" onclick="openStep('portfolio')">📖 More Information</button>
+      </div>
+
+      <div class="step">
+        <div class="number">4</div>
+        <h3>Find Opportunities</h3>
+        <p>
+          Apply for suitable remote jobs and freelance opportunities.
+        </p>
+        <button class="step-info-btn" onclick="openStep('opportunities')">📖 More Information</button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SKILLS -->
+  <section id="skills">
+
+    <div class="section-title">
+      <h2>Useful Skills</h2>
+      <p>Skills that can help you work effectively online.</p>
+    </div>
+
+    <div class="skills">
+
+      <div class="skill">
+        <div class="skill-header">
+          <span>Communication</span>
+          <span>90%</span>
+        </div>
+        <div class="bar">
+          <div class="progress" style="width:90%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-header">
+          <span>Computer Skills</span>
+          <span>85%</span>
+        </div>
+        <div class="bar">
+          <div class="progress" style="width:85%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-header">
+          <span>Time Management</span>
+          <span>80%</span>
+        </div>
+        <div class="bar">
+          <div class="progress" style="width:80%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-header">
+          <span>Problem Solving</span>
+          <span>85%</span>
+        </div>
+        <div class="bar">
+          <div class="progress" style="width:85%"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- EARNINGS CALCULATOR -->
+  <section>
+
+    <div class="section-title">
+      <h2>Income Calculator</h2>
+      <p>Estimate your monthly income based on your hourly rate.</p>
+    </div>
+
+    <div class="calculator">
+
+      <input
+        type="number"
+        id="rate"
+        placeholder="Hourly rate ($)"
+        min="0"
+      >
+
+      <input
+        type="number"
+        id="hours"
+        placeholder="Hours worked per week"
+        min="0"
+      >
+
+      <button class="btn btn-dark" onclick="calculateIncome()">
+        Calculate
+      </button>
+
+      <div id="result"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SAFETY -->
+  <section class="safety" id="safety">
+
+    <div class="section-title">
+      <h2>Stay Safe Online</h2>
+      <p>Protect yourself when looking for remote work.</p>
+    </div>
+
+    <div class="safety-grid">
+
+      <div class="safety-card">
+        <h3>🔐 Protect Your Information</h3>
+        <p>
+          Avoid sharing passwords, banking information or unnecessary
+          personal information with unknown people.
+        </p>
+      </div>
+
+      <div class="safety-card">
+        <h3>⚠️ Watch For Scams</h3>
+        <p>
+          Be careful with jobs that promise unusually large amounts
+          of money for very little work or ask you to pay upfront.
+        </p>
+      </div>
+
+      <div class="safety-card">
+        <h3>🔎 Research Employers</h3>
+        <p>
+          Research a company and verify its official website and
+          contact information before accepting an opportunity.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="section-title">
+      <h2>Contact Us</h2>
+      <p>Have a question? Send us a message.</p>
+    </div>
+
+    <div class="contact">
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Your name"
+      >
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Your email"
+      >
+
+      <textarea
+        id="message"
+        placeholder="Your message"
+      ></textarea>
+
+      <button class="btn btn-dark" onclick="sendMessage()">
+        Send Message
+      </button>
+
+      <p id="contactResult"></p>
+
+    </div>
+
+  </section>
+
+
+
+  <div class="job-modal" id="jobModal" onclick="closeJob(event)">
+    <div class="job-modal-content" onclick="event.stopPropagation()">
+      <button class="close-modal" onclick="closeJob()">×</button>
+      <div id="jobDetails"></div>
+    </div>
+  </div>
+
+
+  <!-- HOW TO START INFORMATION MODAL -->
+  <div class="job-modal" id="stepModal" onclick="closeStep(event)">
+    <div class="job-modal-content" onclick="event.stopPropagation()">
+      <button class="close-modal" onclick="closeStep()">×</button>
+      <div id="stepDetails"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 WorkFromHome. Learn skills. Find opportunities. Work remotely.
+    </p>
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    // Income calculator
+    function calculateIncome() {
+
+      const rate = Number(document.getElementById("rate").value);
+      const hours = Number(document.getElementById("hours").value);
+
+      if (rate <= 0 || hours <= 0) {
+        document.getElementById("result").textContent =
+          "Please enter valid numbers.";
+        return;
+      }
+
+      // Approximate 4.33 weeks per month
+      const monthlyIncome = rate * hours * 4.33;
+
+      document.getElementById("result").textContent =
+        "Estimated monthly income: $" +
+        monthlyIncome.toFixed(2);
+    }
+
+
+    // Contact form
+    function sendMessage() {
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      if (name === "" || email === "" || message === "") {
+
+        document.getElementById("contactResult").textContent =
+          "Please complete all fields.";
+
+        return;
+      }
+
+      document.getElementById("contactResult").textContent =
+        "Thank you, " + name + "! Your message has been received.";
+
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+    }
+
+
+    const jobInfo = {
+      web: {
+        title: "💻 Web Development",
+        intro: "Web developers create and maintain websites and web applications.",
+        duties: ["Build websites using HTML, CSS and JavaScript.","Make pages work well on phones, tablets and computers.","Fix website problems and improve performance.","Work with designers and other developers."],
+        skills: ["HTML","CSS","JavaScript","Problem solving","Attention to detail"],
+        tools: ["VS Code","Git/GitHub","Web browsers","Developer tools"],
+        start: "Start with HTML and CSS, then learn JavaScript and build several small websites."
+      },
+      writing: {
+        title: "✍️ Content Writing",
+        intro: "Content writers create useful and engaging written material for websites and businesses.",
+        duties: ["Write blog posts and website content.","Research topics and organize information.","Edit writing for clarity, grammar and accuracy.","Adapt writing to different audiences."],
+        skills: ["Writing","Research","Grammar","Editing","Communication"],
+        tools: ["Google Docs","Microsoft Word","Grammar tools","Content management systems"],
+        start: "Create a small portfolio with articles or sample posts and practise writing clearly for different audiences."
+      },
+      design: {
+        title: "🎨 Graphic Design",
+        intro: "Graphic designers create visual content for businesses, websites and social media.",
+        duties: ["Create logos, posters and social media graphics.","Choose suitable layouts, fonts and images.","Follow a brand's visual style.","Revise designs based on feedback."],
+        skills: ["Creativity","Typography","Layout","Colour theory","Communication"],
+        tools: ["Canva","Figma","Adobe tools","Image editing software"],
+        start: "Learn basic design principles and build a portfolio containing several original designs."
+      },
+      data: {
+        title: "📊 Data Work",
+        intro: "Data professionals organize information and use it to produce useful results.",
+        duties: ["Enter and organize information.","Clean and check datasets.","Create spreadsheets and simple reports.","Find patterns or useful information in data."],
+        skills: ["Excel","Accuracy","Organization","Basic statistics","Problem solving"],
+        tools: ["Microsoft Excel","Google Sheets","Data visualization tools","Database software"],
+        start: "Learn spreadsheet skills first, then practise with small datasets and simple charts."
+      },
+      support: {
+        title: "🎧 Customer Support",
+        intro: "Customer support workers help customers solve problems and answer questions.",
+        duties: ["Respond to customer questions by chat or email.","Explain products or services clearly.","Solve common customer problems.","Record issues and follow company procedures."],
+        skills: ["Communication","Patience","Problem solving","Typing","Professionalism"],
+        tools: ["Email","Live chat","Help-desk software","Customer relationship systems"],
+        start: "Improve communication and typing skills, then practise writing clear and professional customer responses."
+      },
+      social: {
+        title: "📱 Social Media",
+        intro: "Social media professionals help organizations create content and manage online communities.",
+        duties: ["Plan and publish social media content.","Create captions, images and short videos.","Monitor comments and messages.","Review engagement and improve content."],
+        skills: ["Creativity","Writing","Communication","Content planning","Basic analytics"],
+        tools: ["Canva","Meta Business tools","Scheduling platforms","Analytics dashboards"],
+        start: "Learn how major social platforms work and create sample posts for a small portfolio."
+      }
+    };
+
+    function openJob(key) {
+      const job = jobInfo[key];
+      if (!job) return;
+      document.getElementById("jobDetails").innerHTML = `
+        <h2>${job.title}</h2>
+        <p>${job.intro}</p>
+        <h3>📋 What does this job involve?</h3>
+        <ul>${job.duties.map(item => `<li>${item}</li>`).join("")}</ul>
+        <h3>🧠 Skills you need</h3>
+        <ul>${job.skills.map(item => `<li>${item}</li>`).join("")}</ul>
+        <h3>🛠️ Common tools</h3>
+        <ul>${job.tools.map(item => `<li>${item}</li>`).join("")}</ul>
+        <div class="job-tip">🚀 <strong>How to start:</strong> ${job.start}</div>
+      `;
+      document.getElementById("jobModal").classList.add("show");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeJob(event) {
+      if (event && event.target.id !== "jobModal") return;
+      document.getElementById("jobModal").classList.remove("show");
+      document.body.style.overflow = "";
+    }
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape") {
+        document.getElementById("jobModal").classList.remove("show");
+        document.body.style.overflow = "";
+      }
+    });
+
+
+    const stepInfo = {
+      choose: {
+        title: "🎯 Step 1: Choose a Skill",
+        intro: "Start by choosing one useful skill that matches your interests and the type of work you want to do.",
+        actions: [
+          "Think about what you enjoy: technology, writing, design, data, communication or social media.",
+          "Choose one skill instead of trying to learn everything at once.",
+          "Research what beginners need to know in that skill.",
+          "Set a simple learning goal for the next few weeks."
+        ],
+        example: "If you enjoy computers, you could start with HTML and CSS for web development.",
+        next: "Once you have chosen your skill, move to Step 2: Practice."
+      },
+      practice: {
+        title: "📚 Step 2: Practice",
+        intro: "Learning becomes more useful when you practise by doing real tasks and small projects.",
+        actions: [
+          "Study the basic concepts of your chosen skill.",
+          "Practise regularly rather than only studying occasionally.",
+          "Create small projects that show what you have learned.",
+          "Review your mistakes and improve your work."
+        ],
+        example: "For web development, build a simple personal page, then improve its design and add JavaScript features.",
+        next: "When you have several practice projects, move to Step 3: Create a Portfolio."
+      },
+      portfolio: {
+        title: "📁 Step 3: Create a Portfolio",
+        intro: "A portfolio is a collection of your work that helps employers or clients understand what you can do.",
+        actions: [
+          "Choose your strongest projects.",
+          "Add a short explanation of what you created and the skills you used.",
+          "Keep your portfolio organized and easy to view.",
+          "Update it as your skills improve."
+        ],
+        example: "A beginner web developer could include three websites they built and explain the HTML, CSS and JavaScript used.",
+        next: "After building your portfolio, move to Step 4: Find Opportunities."
+      },
+      opportunities: {
+        title: "🚀 Step 4: Find Opportunities",
+        intro: "Once you have a skill and examples of your work, you can start looking for suitable remote jobs or freelance opportunities.",
+        actions: [
+          "Search legitimate job websites and company career pages.",
+          "Read the job requirements carefully before applying.",
+          "Use your portfolio to show your skills.",
+          "Keep improving your CV, applications and interview skills.",
+          "Be careful with scams and never pay suspicious upfront fees for a job."
+        ],
+        example: "You can look for suitable opportunities on job boards such as LinkedIn Jobs, Indeed, Upwork and other remote-work platforms.",
+        next: "Keep learning and applying. Your first opportunity may take time, so continue improving your skills."
+      }
+    };
+
+    function openStep(key) {
+      const step = stepInfo[key];
+      if (!step) return;
+
+      document.getElementById("stepDetails").innerHTML = `
+        <h2>${step.title}</h2>
+        <p>${step.intro}</p>
+
+        <h3>✅ What should you do?</h3>
+        <ul>${step.actions.map(item => `<li>${item}</li>`).join("")}</ul>
+
+        <h3>💡 Example</h3>
+        <div class="job-tip">${step.example}</div>
+
+        <h3>➡️ Next step</h3>
+        <p>${step.next}</p>
+      `;
+
+      document.getElementById("stepModal").classList.add("show");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeStep(event) {
+      if (event && event.target.id !== "stepModal") return;
+      document.getElementById("stepModal").classList.remove("show");
+      document.body.style.overflow = "";
+    }
+
+  </script>
+
+</body>
+</html>
